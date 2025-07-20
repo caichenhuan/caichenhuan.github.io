@@ -1,49 +1,205 @@
 ---
 permalink: /
-title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "About Me"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
+{% if site.google_scholar_stats_use_cdn %}
+{% assign gsDataBaseUrl = "<https://cdn.jsdelivr.net/gh/>" | append: site.repository | append: "@" %}
+{% else %}
+{% assign gsDataBaseUrl = "<https://raw.githubusercontent.com/>" | append: site.repository | append: "/" %}
+{% endif %}
+{% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
+<span class='anchor' id='about-me'></span>
 
-A data-driven personal website
-======
-Like many other Jekyll-based GitHub Pages templates, Academic Pages makes you separate the website's content from its form. The content & metadata of your website are in structured markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
+Hi, I'm Chenhuan Cai. Thanks for visiting my website!
 
-Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over - just be sure to save the markdown files! Finally, you can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
 
-Getting started
-======
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this template](https://github.com/academicpages/academicpages.github.io) by clicking the "Use this template" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
 
-Site-wide configuration
-------
-The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. 
+# Updates
 
-Create content & metadata
-------
-For site content, there is one markdown file for each type of content, which are stored in directories like _publications, _talks, _posts, _teaching, or _pages. For example, each talk is a markdown file in the [_talks directory](https://github.com/academicpages/academicpages.github.io/tree/master/_talks). At the top of each markdown file is structured data in YAML about the talk, which the theme will parse to do lots of cool stuff. The same structured data about a talk is used to generate the list of talks on the [Talks page](https://academicpages.github.io/talks), each [individual page](https://academicpages.github.io/talks/2012-03-01-talk-1) for specific talks, the talks section for the [CV page](https://academicpages.github.io/cv), and the [map of places you've given a talk](https://academicpages.github.io/talkmap.html) (if you run this [python file](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.py) or [Jupyter notebook](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb), which creates the HTML for the map based on the contents of the _talks directory).
+- _2022.07_: &nbsp;🤖🛺 我在日内瓦参加2023苏黎世联邦理工学院RobotX夏令营，尝试使用移动机器人探索复杂环境！
 
-**Markdown generator**
 
-The repository includes [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator
-) that converts a CSV containing structured data about talks or presentations into individual markdown files that will be properly formatted for the Academic Pages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the markdown files, then commit and push them to the GitHub repository.
 
-How to edit your site's GitHub repository
-------
-Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. 
+<span class='anchor' id='educations'></span>
 
-Example: editing a markdown file for a talk
-![Editing a markdown file for a talk](/images/editing-talk.png)
+# Educations
 
-For more info
-------
-More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/), the [growing wiki](https://github.com/academicpages/academicpages.github.io/wiki), and you can always [ask a question on GitHub](https://github.com/academicpages/academicpages.github.io/discussions). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+
+- _2023.09 - present_, M.Sc. in Informatics, **University of Zurich**, Switzerland
+- _2019.09 - 2023.06_, B.Sc. in Data Science and Big Data Technology, **Harbin Institute of Technology (Shenzhen)**, China
+
+
+<span class='anchor' id='experiences'></span>
+
+# Experiences
+
+
+<div class='paper-box'>
+<div class='paper-box-image'><div>
+        <!-- <div class="badge">CVPR 2016</div> -->
+        <img src='images/GSICP_LVIO.png' alt="sym" width="100%">
+</div></div>
+
+<div class='paper-box-text' markdown="1">
+
+[项目 – 基于高斯溅射的雷达-视觉-惯性里程计（LVIO）]()
+
+- 将雷达数据和RGB数据融合为统一的高斯点云，与全局高斯点云进行比较，通过最大似然估计来实现里程计
+- 结合GTSAM优化器实现了基于数据融合的LVIO，相较其他基于深度相机的GS-SLAM方案大大提升了定位精度和重建质量
+
+</div>
+</div>
+
+
+
+
+
+<span class='anchor' id='competitions-and-projects'></span>
+
+# Projects & Researches
+
+
+<div class='paper-box'>
+<div class='paper-box-image'><div>
+        <!-- <div class="badge">CVPR 2016</div> -->
+        <img src='images/GSICP_LVIO.png' alt="sym" width="100%">
+</div></div>
+
+<div class='paper-box-text' markdown="1">
+
+[项目 – 基于高斯溅射的雷达-视觉-惯性里程计（LVIO）]()
+
+- 将雷达数据和RGB数据融合为统一的高斯点云，与全局高斯点云进行比较，通过最大似然估计来实现里程计
+- 结合GTSAM优化器实现了基于数据融合的LVIO，相较其他基于深度相机的GS-SLAM方案大大提升了定位精度和重建质量
+
+</div>
+</div>
+
+
+
+<div class='paper-box'>
+<div class='paper-box-image'><div>
+        <!-- <div class="badge">CVPR 2016</div> -->
+        <img src='images/500x300.png' alt="sym" width="100%">
+</div></div>
+
+<div class='paper-box-text' markdown="1">
+
+[硕士项目 – 纯RGB的零样本（zero-shot）物体6D姿态估计及三维重建]()
+
+- 针对相机固定+运动物体的场景跟踪物体，进行6D姿态估计，并基于预测姿态进行几何模型重建或新视角生成
+- 基于带有尺度误差和噪声的单目深度估计模型，通过鲁棒优化器实现仅有RGB输入的物体6D位姿估计（C++）
+- 通过训练NeRF或者高斯溅射模型，对带有尺度噪声的物体点云、位姿和尺度进行全局优化，实现物体三维重建与新视角生成
+
+</div>
+</div>
+
+
+
+<div class='paper-box'>
+<div class='paper-box-image'><div>
+        <!-- <div class="badge">CVPR 2016</div> -->
+        <img src='images/3DV_Project.png' alt="sym" width="100%">
+</div></div>
+
+<div class='paper-box-text' markdown="1">
+
+[项目 – 基于NeRF对VR头戴相机进行图像稳定]()
+
+- 在“Depth-Supervised NeRF”的基础上对其流程进行修改和拓展，从而使用深度先验来重建室内环境
+- 实现“Deblur-NeRF”, 通过运动先验来对带有运动模糊的输入图像进行去噪声学习，在VR中渲染模型来实现图像稳定
+- 在只使用有限的训练视角且输入图像有运动噪声的情况下，对卧室环境达到了相对较好的三维重建质量
+
+</div>
+</div>
+
+
+
+<div class='paper-box'>
+<div class='paper-box-image'><div>
+        <!-- <div class="badge">CVPR 2016</div> -->
+        <img src='images/EMP_Compress.png' alt="sym" width="100%">
+</div></div>
+
+<div class='paper-box-text' markdown="1">
+
+[本科毕业设计 – 基于隐式神经表示的医疗显微图像压缩算法]()
+
+- 设计了Embedding-MLP-PixelShuffle 架构来对高分辨率医疗显微图像进行压缩，并对神经表示进行低秩正则化
+- 部署了一套基于隐式神经表示的超分辨率算法在接收端对解压后的图像进行还原（对应发送端的初步压缩）
+- 在压缩率为0.2-0.7区间时，实现了接近于JPEG2000算法的 BPP-PSNR 和 BPP-MSSSIM 表现
+
+</div>
+</div>
+
+
+
+<div class='paper-box'>
+<div class='paper-box-image'><div>
+        <!-- <div class="badge">CVPR 2016</div> -->
+        <img src='images/CTR_System.png' alt="sym" width="100%">
+</div></div>
+
+<div class='paper-box-text' markdown="1">
+
+[本科毕业设计 – 用于微创手术的多臂同心管机器人]()
+
+- 实现了完整功能的多臂同心管微创手术机器人。包括机械设计，动力学建模，同心管臂标定以及多臂同心管机器人系统标定
+- 设计了同心管机械臂的标定算法与基于视觉的连续体机器人末端视觉标签的6D姿态估计算法（C++）
+- 在实现了臂与臂之间运动独立的同时，达到了一个更靠近中心轴线的臂间根部分布（臂与臂之间的距离足够小）
+
+</div>
+</div>
+
+
+
+<div class='paper-box'>
+<div class='paper-box-image'><div>
+        <!-- <div class="badge">CVPR 2016</div> -->
+        <img src='images/Logistic_Car.png' alt="sym" width="100%">
+</div></div>
+
+<div class='paper-box-text' markdown="1">
+
+[工程能力综合训练大赛 - 四轮物料搬运机器人]()
+
+- 四轮物料搬运机器人，有夹取、搬运、放置功能，通过IMU传感器和巡线功能将物料从原料区搬运到加工区再搬运到成品区
+- 实时视觉处理，使用OpenMV4相机来区分不同颜色的物料，并实现将物料放到对应颜色的圆环的正中心
+
+</div>
+</div>
+
+
+
+<div class='paper-box'>
+<div class='paper-box-image'><div>
+        <!-- <div class="badge">CVPR 2016</div> -->
+        <img src='images/RM_Embedding.png' alt="sym" width="100%">
+</div></div>
+
+<div class='paper-box-text' markdown="1">
+
+[全国机器人大赛 - 机器人嵌入式开发]()
+
+- 设计并实现了面向对象的嵌入式机器人代码框架，南工骁鹰机器人队开源代码框架的初代版本编写者
+- 2020赛季工程机器人整车模块化代码编写，实现了基于状态机的一键取弹及补给
+
+</div>
+</div>
+
+
+
+
+<span class='anchor' id='miscellaneous'></span>
+
+# Others
+
+
+- _2019 - 2021_ 哈尔滨工业大学（深圳）南工骁鹰机器人队，担任队长/副队长
+- _2019_ 哈尔滨工业大学（深圳）机电学院羽毛球队，院系杯团体第三名
+- _2019_ 哈尔滨工业大学（深圳）机电学院机械系足球队第16届足球赛冠军，担任队长
