@@ -35,8 +35,6 @@ main:
 
   # - title: "About Me"
   #   url: "#about-me"
-  # - title: "Education"
-  #   url: "#education"
   - title: "Research & Projects"
     url: /research-and-projects/
   - title: "Experience"
