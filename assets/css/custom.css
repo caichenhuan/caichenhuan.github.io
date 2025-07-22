@@ -1,0 +1,10 @@
+/* Custom styles for square avatar */
+.author__avatar img {
+  border-radius: 0 !important; /* Remove circular border radius */
+  border: 2px solid #e1e1e1; /* Add a subtle border */
+}
+
+/* Optional: Add a subtle shadow for better appearance */
+.author__avatar img {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} 

@@ -24,18 +24,35 @@
     <button class="btn btn--inverse">Follow</button>
     <ul class="author__urls social-icons">
       <!-- Font Awesome icons / Biographic information  -->
+      <hr>
       {% if author.location %}
         <li class="author__desktop"><i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i>{{ author.location }}</li>
       {% endif %}
       {% if author.employer %}
         <li class="author__desktop"><i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>{{ author.employer }}</li>
-      {% endif %}
+      {% endif %} 
+      {% if author.employer2 %}
+        <li class="author__desktop"><i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>{{ author.employer2 }}</li>
+      {% endif %} 
       {% if author.uri %}
         <li><a href="{{ author.uri }}"><i class="fas fa-fw fa-link icon-pad-right" aria-hidden="true"></i>{{ site.data.ui-text[site.locale].website_label | default: "Website" }}</a></li>
       {% endif %}
       {% if author.email %}
-        <li><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>{{ site.data.ui-text[site.locale].email_label | default: "Email" }}</a></li>
+      <hr>
+        <li>
+          <i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>
+          <span>{{ author.email }}</span>
+        </li>
       {% endif %}
+      
+      {% if author.email2 %}
+        <li>
+          <i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>
+          <span>{{ author.email2 }}</span>
+        </li>
+      {% endif %}
+      <hr>
+      
 
       <!-- Font Awesome and Academicons icons / Academic websites -->
       {% if author.academia %}

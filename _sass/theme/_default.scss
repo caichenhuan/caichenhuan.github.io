@@ -45,3 +45,10 @@ $sidebar-screen-min-width   : 1024px;
     --global-text-color-light           : #{$light-gray};
     --global-thead-color                : #{$lighter-gray};
 }
+
+
+// /* ---------- override text color ---------- */
+// :root {
+//     --global-text-color       : #000;  /* 正文、列表等主要文字 */
+//     --global-text-color-light : #666;  /* 次级信息（可读性更好，避免全黑） */
+//   }
