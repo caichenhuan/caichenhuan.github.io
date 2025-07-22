@@ -27,7 +27,7 @@ My research interests focus on **Computer Vision** and **Machine Learning**.
 
 
 - (Jul 2025) - Our paper on Dense Video Captioning is accepted by ECAI 2025. <img src="/images/ecai2025.png" width="50" style="display:inline;vertical-align:middle;">
-- (Mar 2025) - I started my project on 3D Gaussian Reconstruction in ETH Zurich. <img src="/images/ethz.png" width="70" style="display:inline;vertical-align:middle;">
+- (Mar 2025) - I started a project on 3D Gaussian Reconstruction in ETH Zurich. <img src="/images/ethz.png" width="70" style="display:inline;vertical-align:middle;">
 
 
 
@@ -49,9 +49,9 @@ My research interests focus on **Computer Vision** and **Machine Learning**.
 
 ---
 ### Maybe a bit more...
-During my undergraduate years I explored machine learning and won a prize in the [Mathematical Contest in Modeling](/research-and-projects/#cummcm). That experience led me to further ML and data-mining competitions and a summer research internship at [McGill University](/experience/#mcgill).
+During my undergraduate studies, I explored machine learning and won my first computing-related prize in the [Mathematical Contest in Modeling](/research-and-projects/#cummcm). That experience motivated me to enter further competitions in machine learning, data mining, and data analysis, and a research internship at [McGill University](/experience/#mcgill).
 
-I then also learned about computer vision: I earned a silver medal in the Kaggle competition [Stable Diffusion: Image-to-Prompts](/research-and-projects/#stable-diffusion), interned at [NetEase](/experience/#netease) as a CV algorithm engineer, and co-authored a paper on [Dense Video Captioning](/publications/#star-ecai-paper).
+I then delved into computer vision: I took part in several competitions including rock-image classification, underwater starfish detection, later earned a silver medal in the [Stable Diffusion: Image-to-Prompts](/research-and-projects/#stable-diffusion) challenge. I also interned at [NetEase](/experience/#netease) as a computer vision algorithm engineer, and co-authored a paper on [Dense Video Captioning](/publications/#star-ecai-paper).
 
 Now I am pursuing an M.S. in AI at UZH and conducting 3-D vision research with the [CVG lab at ETH Zurich](/experience/#ethz).
 

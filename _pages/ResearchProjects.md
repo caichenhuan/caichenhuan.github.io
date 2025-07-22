@@ -25,14 +25,16 @@ This project builds on NoPoSplat, a pose-free method that reconstructs 3-D Gauss
 
 <a id="star-ecai"></a>
 <span style="color: #205ea6; font-weight: bold; font-size: 1.3em;"> STaR: Multi-Granular Spatio-Temporal Reasoning for Long-Form Dense Video Captioning</span>  
-*ECAI 2025 [PDF](files/STAR-ECAI.pdf)*  
+*ECAI 2025 [PDF](/files/STAR-ECAI.pdf)*  
 
 <img src="/images/STAR流程图.png" alt="Stable Diffusion Example" style="max-width: 100%; margin: 16px 0;">
 
-This project builds on NoPoSplat, a pose-free method that reconstructs 3-D Gaussian scenes from sparse multi-view images without known camera poses. We aim to raise reconstruction quality when viewpoints are few and overlap is minimal. My duty includes:
-- **Multi-view extension**: Incorporate a Fusion Transformer into NoPoSplat to fuse information from additional viewpoints.
-- **Intrinsic-free reconstruction**: Replace the traditional camera-intrinsic embedding with a prediction network, aiming for a pipeline that is completely independent of intrinsic parameters.
-- **Generative prior**: Introduce a diffusion model as a generative prior for 3D Gaussians, markedly boosting both the quality and stability of the reconstruction.
+
+This project focuses on **long-form dense video captioning (DVC)**, which detects multiple event segments in untrimmed videos and generates a natural-language description for each one. Our main contributions are:
+
+- **STaR framework** Propose **STaR**, which integrates global, local, and spatial cues through multi-granular spatio-temporal reasoning.  
+- **SSS and CC modules** Introduce **SSS** (for spatial-position awareness) and **CC** (for global-context understanding).  
+- **LLM-enhanced captions** Incorporate a large language model (LLM) into STaR, significantly improving caption quality on the **SoccerNet-Caption** dataset.
 
 ---
 
