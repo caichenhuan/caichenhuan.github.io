@@ -12,14 +12,35 @@ redirect_from:
 ---
 
 <a id="multi-view-3d-reconstruction"></a>
-<span style="color: #205ea6; font-weight: bold; font-size: 1.3em;"> Enhancing Multi-view 3D Reconstruction</span>  
+<span style="color: #205ea6; font-weight: bold; font-size: 1.3em;"> GenSplat: Generative View Augmentation for Multi-View Reference-Free Gaussian Splatting</span>  
 *Advisor: Dr. Fangjinhua Wang, Prof. Marc Pollefeys (ETH Zurich)*  
-<img src="/images/流程图.png" alt="Stable Diffusion Example" style="max-width: 100%; margin: 16px 0;">
+<img src="/images/structure_gensplat.png" alt="Stable Diffusion Example" style="max-width: 100%; margin: 16px 0;">
 
-This project builds on NoPoSplat, a pose-free method that reconstructs 3-D Gaussian scenes from sparse multi-view images without known camera poses. We aim to raise reconstruction quality when viewpoints are few and overlap is minimal. My duty includes:
-- **Multi-view extension**: Incorporate a Fusion Transformer into NoPoSplat to fuse information from additional viewpoints.
-- **Intrinsic-free reconstruction**: Replace the traditional camera-intrinsic embedding with a prediction network, aiming for a pipeline that is completely independent of intrinsic parameters.
-- **Generative prior**: Introduce a diffusion model as a generative prior for 3D Gaussians, markedly boosting both the quality and stability of the reconstruction.
+Topic: **sparse-view 3D Gaussian reconstruction**.
+
+- Identified limitations of prior work (e.g., NoPoSplat) for novel view synthesis, including quality degradation with **low-overlap inputs** and **sensitivity to input order**.
+- Proposed **GenSplat**, a generative-prior-based Gaussian fusion framework with more robust Gaussian generation.
+- **Generative prior**: leveraged diffusion models and camera pose selection strategies for data augmentation to improve reconstruction quality.
+- **Gaussian fusion**: designed a permutation-equivariant Transformer and local-to-global Gaussian fusion to support multi-view extension and remove input-order dependency.
+- Achieved better LPIPS, PSNR, SSIM and qualitative results than NoPoSplat on RE10K and DL3DV under pose-free reconstruction settings.
+
+
+---
+
+
+<a id="shapenav"></a>
+<span style="color: #205ea6; font-weight: bold; font-size: 1.3em;"> ShapeNav: 3D Geometric Perception and Reasoning for Multi-Floor Vision-and-Language Navigation</span>  
+*[PDF](/files/shapenav.pdf)*  
+
+<img src="/images/structure_shapenav.png" alt="Structurr" style="max-width: 100%; margin: 16px 0;">
+
+Role: incorporating **explicit 3D geometry** into vision-and-language navigation.
+
+- Motivated by the lack of explicit 3D geometric perception in prior VLN methods and the difficulty of 2D-pretrained VLMs to extract 3D geometric features.
+- Proposed **ShapeNav**, a point-cloud + VLM framework for 3D geometric perception and spatial understanding navigation, without requiring 3D pretraining.
+- Designed Geometric Patch Extraction (**GPE**) and Masked Optimal Transport (**MOT**) to align 3D shape features with 2D visual features for cross-modal fusion.
+- Achieved state-of-the-art results on R2R and F2F, improving success rate by 3% over DUET and reducing error by 0.29m, outperforming NavGPT-2 and other SOTA models.
+
 
 ---
 
@@ -30,13 +51,16 @@ This project builds on NoPoSplat, a pose-free method that reconstructs 3-D Gauss
 <img src="/images/STAR流程图.png" alt="Stable Diffusion Example" style="max-width: 100%; margin: 16px 0;">
 
 
-This project focuses on **long-form dense video captioning (DVC)**, which detects multiple event segments in untrimmed videos and generates a natural-language description for each one. Our main contributions are:
+Role: **cross-modal fusion** for **long-form dense video captioning**.
 
-- **STaR framework** Propose **STaR**, which integrates global, local, and spatial cues through multi-granular spatio-temporal reasoning.  
-- **SSS and CC modules** Introduce **SSS** (for spatial-position awareness) and **CC** (for global-context understanding).  
-- **LLM-enhanced captions** Incorporate a large language model (LLM) into STaR, significantly improving caption quality on the **SoccerNet-Caption** dataset.
+- Addressed limitations of existing methods on long-range context understanding and degraded spatial information.
+- Proposed **STaR**, a multi-granular spatio-temporal reasoning framework that models both local and global visual context and incorporates dynamic positional encoding for cross-view spatial semantic modeling.
+- Designed a Context Capture (CC) module to fuse global context with short-window local features, and a Spatial Semantic Synthesis (SSS) module with hash encoding to enhance spatial perception.
+- Achieved state-of-the-art performance on SoccerNet-Caption, improving CIDEr by +16.8 and boosting BLEU and METEOR as well.
+
 
 ---
+
 
 <a id="stable-diffusion"></a>
 <span style="color: #205ea6; font-weight: bold; font-size: 1.3em;"> Stable Diffusion: Image-to-Prompts</span>  
