@@ -43,7 +43,7 @@ redirect_from:
   <article class="cv-download-card">
     <div>
       <div class="cv-download-label">English Version</div>
-      <h2>Chenhuan Cai CV</h2>
+      <h2>Chenhuan (Choy) Cai CV</h2>
       <p>Academic and research CV in English.</p>
     </div>
     <a class="cv-download-button" href="/files/chenhuan-cai-cv-en.pdf" download>Download English CV</a>
@@ -63,4 +63,3 @@ redirect_from:
 ---
 
 *"Life is too short to work with not the best people in the world." ------ Reynold Xin, Co-founder of Databricks*
-

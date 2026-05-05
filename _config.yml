@@ -9,9 +9,9 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Chenhuan Cai"
+title                    : "Chenhuan (Choy) Cai"
 title_separator          : "-"
-name                     : &name "Chenhuan Cai"
+name                     : &name "Chenhuan (Choy) Cai"
 description              : &description "M.S. student in Artificial Intelligence at the University of Zurich, focused on computer vision, deep learning, 3D reconstruction, and vision-and-language navigation."
 url                      : https://caichenhuan.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -23,7 +23,7 @@ repository               : "caichenhuan/caichenhuan.github.io"
 author:
   # Biographic information
   avatar           : "image-7.png"
-  name             : "Chenhuan Cai"
+  name             : "Chenhuan (Choy) Cai"
   pronouns         : # example: "she/her"  
   bio              : # "The best way to predict the future is to create it :))"
   # location         : "Earth"
