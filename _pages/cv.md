@@ -9,56 +9,27 @@ redirect_from:
 
 {% include base_path %}
 
-Education
-======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+<section class="cv-download-panel" markdown="1">
+<div class="section-title">Download CV</div>
+<p class="cv-download-intro">Choose the version you need. The PDF will download after selecting one of the options below.</p>
 
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+<div class="cv-download-grid">
+  <article class="cv-download-card">
+    <div>
+      <div class="cv-download-label">English Version</div>
+      <h2>Chenhuan Cai CV</h2>
+      <p>Academic and research CV in English.</p>
+    </div>
+    <a class="cv-download-button" href="/files/chenhuan-cai-cv-en.pdf" download>Download English CV</a>
+  </article>
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
-
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+  <article class="cv-download-card">
+    <div>
+      <div class="cv-download-label">中文版</div>
+      <h2>蔡晨焕 简历</h2>
+      <p>中文简历版本。</p>
+    </div>
+    <a class="cv-download-button" href="/files/chenhuan-cai-cv-zh.pdf" download>下载中文简历</a>
+  </article>
+</div>
+</section>

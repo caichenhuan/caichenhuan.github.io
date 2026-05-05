@@ -10,17 +10,34 @@ redirect_from:
 {% include base_path %}
 
 
-<span style="color:#205ea6; font-weight:bold; font-size:1.3em;">Skills & Tools I've Used...</span>  
+<section class="skill-panel" markdown="1">
+<div class="section-title">Skills & Tools I've Used</div>
 
-- **Machine Learning**: Python · Scikit-learn · Data cleaning · Data analysis · Feature engineering · Model evaluation · Boosting · Stacking · XGBoost · LightGBM · Time series analysis · Clustering · Dimensionality reduction · Optimal algorithms
-- **Computer Vision**: Image classification · Object detection · image/instance segmentation · Video captioning · 3-D reconstruction · Vision-and-Language Navigation · Vision Transformers · Diffusion models · Generative models  
-- **Other**: CUDA · PyTorch · TensorFlow · Hugging Face · Weights & Biases · transfer / fine-tuning · distributed training · Git 
+<div class="skill-group">
+  <h2>Machine Learning</h2>
+  <div class="skill-chip-grid">
+    <span>Python</span><span>Scikit-learn</span><span>Data cleaning</span><span>Data analysis</span><span>Feature engineering</span><span>Model evaluation</span><span>Boosting</span><span>Stacking</span><span>XGBoost</span><span>LightGBM</span><span>Time series analysis</span><span>Clustering</span><span>Dimensionality reduction</span><span>Optimization</span>
+  </div>
+</div>
 
+<div class="skill-group">
+  <h2>Computer Vision</h2>
+  <div class="skill-chip-grid">
+    <span>Image classification</span><span>Object detection</span><span>Segmentation</span><span>Video captioning</span><span>3D reconstruction</span><span>Vision-and-Language Navigation</span><span>Vision Transformers</span><span>Diffusion models</span><span>Generative models</span>
+  </div>
+</div>
+
+<div class="skill-group">
+  <h2>Tools</h2>
+  <div class="skill-chip-grid">
+    <span>CUDA</span><span>PyTorch</span><span>TensorFlow</span><span>Hugging Face</span><span>Weights & Biases</span><span>Transfer learning</span><span>Fine-tuning</span><span>Distributed training</span><span>Git</span>
+  </div>
+</div>
+</section>
 
 
 ---
 
 *"Life is too short to work with not the best people in the world." ------ Reynold Xin, Co-founder of Databricks*
-
 
 

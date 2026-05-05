@@ -9,62 +9,56 @@ redirect_from:
 
 {% include base_path %}
 
----
-
+<section class="project-card project-card--featured" markdown="1">
 <a id="multi-view-3d-reconstruction"></a>
-<span style="color: #205ea6; font-weight: bold; font-size: 1.3em;"> GenSplat: Generative View Augmentation for Multi-View Reference-Free Gaussian Splatting</span>  
-*Advisor: Dr. Fangjinhua Wang, Prof. Marc Pollefeys (ETH Zurich)*  
-<img src="/images/structure_gensplat.png" alt="Stable Diffusion Example" style="max-width: 100%; margin: 16px 0;">
+<div class="project-title">GenSplat: Generative View Augmentation for Multi-View Reference-Free Gaussian Splatting</div>
+<div class="project-meta">Advisor: Dr. Fangjinhua Wang, Prof. Marc Pollefeys (ETH Zurich)</div>
+<img class="project-image" src="/images/structure_gensplat.png" alt="GenSplat architecture">
 
-Topic: **sparse-view 3D Gaussian reconstruction**.
+<p class="project-topic">Topic: <strong>sparse-view 3D Gaussian reconstruction</strong>.</p>
 
 - Identified limitations of prior work (e.g., NoPoSplat) for novel view synthesis, including quality degradation with **low-overlap inputs** and **sensitivity to input order**.
 - Proposed **GenSplat**, a generative-prior-based Gaussian fusion framework with more robust Gaussian generation.
 - **Generative prior**: leveraged diffusion models and camera pose selection strategies for data augmentation to improve reconstruction quality.
 - **Gaussian fusion**: designed a permutation-equivariant Transformer and local-to-global Gaussian fusion to support multi-view extension and remove input-order dependency.
 - Achieved better LPIPS, PSNR, SSIM and qualitative results than NoPoSplat on RE10K and DL3DV under pose-free reconstruction settings.
+</section>
 
-
----
-
-
+<section class="project-card" markdown="1">
 <a id="shapenav"></a>
-<span style="color: #205ea6; font-weight: bold; font-size: 1.3em;"> ShapeNav: 3D Geometric Perception and Reasoning for Multi-Floor Vision-and-Language Navigation</span>  
-*[PDF](/files/shapenav.pdf)*  
+<div class="project-title">ShapeNav: 3D Geometric Perception and Reasoning for Multi-Floor Vision-and-Language Navigation</div>
+<div class="project-meta">Under review at CVPR 2026 · <a href="/files/shapenav.pdf">PDF</a></div>
 
-<img src="/images/structure_shapenav.png" alt="Structurr" style="max-width: 100%; margin: 16px 0;">
+<img class="project-image" src="/images/structure_shapenav.png" alt="ShapeNav framework">
 
-Role: incorporating **explicit 3D geometry** into vision-and-language navigation.
+<p class="project-topic">Role: incorporating <strong>explicit 3D geometry</strong> into vision-and-language navigation.</p>
 
 - Motivated by the lack of explicit 3D geometric perception in prior VLN methods and the difficulty of 2D-pretrained VLMs to extract 3D geometric features.
 - Proposed **ShapeNav**, a point-cloud + VLM framework for 3D geometric perception and spatial understanding navigation, without requiring 3D pretraining.
 - Designed Geometric Patch Extraction (**GPE**) and Masked Optimal Transport (**MOT**) to align 3D shape features with 2D visual features for cross-modal fusion.
 - Achieved state-of-the-art results on R2R and F2F, improving success rate by 3% over DUET and reducing error by 0.29m, outperforming NavGPT-2 and other SOTA models.
+</section>
 
-
----
-
+<section class="project-card" markdown="1">
 <a id="star-ecai"></a>
-<span style="color: #205ea6; font-weight: bold; font-size: 1.3em;"> STaR: Multi-Granular Spatio-Temporal Reasoning for Long-Form Dense Video Captioning</span>  
-*ECAI 2025 [PDF](/files/STAR-ECAI.pdf)*  
+<div class="project-title">STaR: Multi-Granular Spatio-Temporal Reasoning for Long-Form Dense Video Captioning</div>
+<div class="project-meta">ECAI 2025 · <a href="/files/STAR-ECAI.pdf">PDF</a></div>
 
-<img src="/images/STAR流程图.png" alt="Stable Diffusion Example" style="max-width: 100%; margin: 16px 0;">
+<img class="project-image" src="/images/STAR流程图.png" alt="STaR framework">
 
 
-Role: **cross-modal fusion** for **long-form dense video captioning**.
+<p class="project-topic">Role: <strong>cross-modal fusion</strong> for <strong>long-form dense video captioning</strong>.</p>
 
 - Addressed limitations of existing methods on long-range context understanding and degraded spatial information.
 - Proposed **STaR**, a multi-granular spatio-temporal reasoning framework that models both local and global visual context and incorporates dynamic positional encoding for cross-view spatial semantic modeling.
 - Designed a Context Capture (CC) module to fuse global context with short-window local features, and a Spatial Semantic Synthesis (SSS) module with hash encoding to enhance spatial perception.
 - Achieved state-of-the-art performance on SoccerNet-Caption, improving CIDEr by +16.8 and boosting BLEU and METEOR as well.
+</section>
 
-
----
-
-
+<section class="project-card" markdown="1">
 <a id="stable-diffusion"></a>
-<span style="color: #205ea6; font-weight: bold; font-size: 1.3em;"> Stable Diffusion: Image-to-Prompts</span>  
-*Kaggle Competition · Silver Medal (Top 5 %)*  
+<div class="project-title">Stable Diffusion: Image-to-Prompts</div>
+<div class="project-meta">Kaggle Competition · Silver Medal (Top 5%)</div>
 <!-- <img src="/images/stablediffusion-eg1.png" alt="Stable Diffusion Example" style="max-width: 100%; margin: 16px 0;"> -->
 
 This project focuses on predicting the original text prompts given images generated by Stable Diffusion. The goal is to accurately recover descriptive prompts from synthetic images, enabling better understanding and reverse engineering of generative models. Our contributions include:
@@ -73,15 +67,16 @@ This project focuses on predicting the original text prompts given images genera
 - **Model training** Encoded prompts into 384-dimensional vectors using a Sentence-Transformer; projected images into the same space with ViT or ConvNeXt and minimized cosine-distance loss.  
 - **Model refinement** Raised input resolution, applied layer-wise learning rates (higher in lower, task-specific blocks), re-initialized the final linear layer, disabled dropout, and added adversarial weight perturbation (AWP) for extra robustness.  
 - **Inference & ensembling** Merged four cross-validation folds with one full-data model (five sub-models total) and used weight-search ensembling for the final predictions.
+</section>
 
----
-
+<section class="project-card" markdown="1">
 <a id="cummcm"></a>
-<span style="color: #205ea6; font-weight: bold; font-size: 1.3em;"> China Undergraduate Mathematical Contest in Modeling</span>  
-*2nd Prize (Top 3.3 %)* 
+<div class="project-title">China Undergraduate Mathematical Contest in Modeling</div>
+<div class="project-meta">2nd Prize (Top 3.3%)</div>
 
 Conducted quantitative analysis and modeling on a chemical-experiment dataset. My duty includes:
 
 - Built a correlation-coefficient matrix, ran OLS regression, and used goodness-of-fit tests to study variable relationships.  
 - Trained several models and selected **XGBoost + SHAP** to quantify feature importance.  
 - Applied an improved Particle Swarm Optimization (PSO) algorithm to optimise the final objective and maximise the target value.
+</section>

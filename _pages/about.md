@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "About Me"
+title: "Chenhuan Cai"
 author_profile: true
 redirect_from: 
   - /about/
@@ -16,11 +16,32 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Hi, I’m **Chenhuan Cai**—thanks for stopping by.  
-I’m currently pursuing an M.S. in Artificial Intelligence at the [University of Zurich](https://www.uzh.ch/en.html).  
-My research interests focus on **Computer Vision** and **Deep Learning**.
+<div class="home-intro" markdown="1">
+<div class="home-kicker">Computer Vision · Deep Learning · 3D Understanding</div>
 
+Hi, I’m **Chenhuan Cai**. I’m currently pursuing an M.S. in Artificial Intelligence at the [University of Zurich](https://www.uzh.ch/en.html). My research interests focus on **computer vision**, **deep learning**, 3D reconstruction, and vision-and-language navigation.
 
+<div class="home-actions">
+  <a class="btn home-action home-action--primary" href="/research-and-projects/">Research & Projects</a>
+  <a class="btn home-action" href="/publications/">Publications</a>
+  <a class="btn home-action" href="/cv/">CV</a>
+</div>
+</div>
+
+<div class="home-focus-grid">
+  <a class="focus-card focus-card--teal" href="/research-and-projects/#multi-view-3d-reconstruction">
+    <span>3D Reconstruction</span>
+    <strong>Generative view augmentation for sparse-view Gaussian Splatting.</strong>
+  </a>
+  <a class="focus-card focus-card--green" href="/research-and-projects/#shapenav">
+    <span>Vision-and-Language Navigation</span>
+    <strong>3D geometric perception and reasoning for multi-floor navigation.</strong>
+  </a>
+  <a class="focus-card focus-card--amber" href="/research-and-projects/#star-ecai">
+    <span>Dense Video Captioning</span>
+    <strong>Multi-granular spatio-temporal reasoning for long-form videos.</strong>
+  </a>
+</div>
 
 ---
 # Updates
@@ -55,8 +76,6 @@ During my undergraduate studies, I explored machine learning and won my first co
 I then delved into computer vision: I took part in several competitions including rock-image classification, underwater starfish detection, later earned a silver medal in the [Stable Diffusion: Image-to-Prompts](/research-and-projects/#stable-diffusion) challenge. I also interned at [NetEase](/experience/#netease) as a computer vision algorithm engineer, and co-authored a paper on [Dense Video Captioning](/publications/#star-ecai-paper).
 
 Now I am pursuing an M.S. in AI at UZH. 
-
-
 
 
 
