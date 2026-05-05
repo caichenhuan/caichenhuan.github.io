@@ -24,7 +24,7 @@ Hi, I’m **Chenhuan Cai**. I’m currently pursuing an M.S. in Artificial Intel
 <div class="home-actions">
   <a class="btn home-action home-action--primary" href="/research-and-projects/">Research & Projects</a>
   <a class="btn home-action" href="/publications/">Publications</a>
-  <a class="btn home-action" href="/cv/">CV</a>
+  <a class="btn home-action" href="/other/#cv-downloads">CV</a>
 </div>
 </div>
 
@@ -76,7 +76,6 @@ During my undergraduate studies, I explored machine learning and won my first co
 I then delved into computer vision: I took part in several competitions including rock-image classification, underwater starfish detection, later earned a silver medal in the [Stable Diffusion: Image-to-Prompts](/research-and-projects/#stable-diffusion) challenge. I also interned at [NetEase](/experience/#netease) as a computer vision algorithm engineer, and co-authored a paper on [Dense Video Captioning](/publications/#star-ecai-paper).
 
 Now I am pursuing an M.S. in AI at UZH. 
-
 
 
 
