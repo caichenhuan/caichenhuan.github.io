@@ -66,18 +66,3 @@ Hi, I’m **Chenhuan (Choy) Cai**. I’m currently pursuing an M.S. in Artificia
 <!-- - **Visiting Student, Computer Science**, ETH Zurich · *Sep 2023 – Present* -->
 - **B.S. Data Science**, Harbin Institute of Technology (Shenzhen) · *Sep 2019 – Jun 2023*
 - **Exchange, Industrial Systems Engineering & Management**, NUS Suzhou Research Institute · *Sep 2022 – Jun 2023*
-
-
-
----
-### Maybe a bit more...
-During my undergraduate studies, I explored machine learning and won my first computing-related prize in the [Mathematical Contest in Modeling](/research-and-projects/#cummcm). That experience motivated me to enter further competitions in machine learning, data mining, and data analysis, and a research internship at [McGill University](/experience/#mcgill).
-
-I then delved into computer vision: I took part in several competitions including rock-image classification, underwater starfish detection, later earned a silver medal in the [Stable Diffusion: Image-to-Prompts](/research-and-projects/#stable-diffusion) challenge. I also interned at [NetEase](/experience/#netease) as a computer vision algorithm engineer, and co-authored a paper on [Dense Video Captioning](/publications/#star-ecai-paper).
-
-Now I am pursuing an M.S. in AI at UZH. 
-
-
-
-
-
