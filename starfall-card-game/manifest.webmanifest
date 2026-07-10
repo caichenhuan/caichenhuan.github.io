@@ -1,0 +1,13 @@
+{
+  "name": "星陨战线 · 三线卡牌对决",
+  "short_name": "星陨战线",
+  "description": "部署单位与法术，在三条战线上击破敌方核心。",
+  "lang": "zh-CN",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#080b18",
+  "theme_color": "#0b1024",
+  "icons": [{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
