@@ -21,14 +21,24 @@ jobs:
           status=''
           for attempt in {1..24}; do
             status="$(curl --location --silent --show-error --output page.html --write-out '%{http_code}' "$url" || true)"
-            if [[ "$status" == '200' ]] && grep --quiet 'RIVER ROOM' page.html; then
+            if [[ "$status" == '200' ]] \
+              && grep --quiet 'RIVER ROOM' page.html \
+              && grep --quiet 'id="lang"' page.html \
+              && grep --quiet 'i18n.js' page.html; then
               break
             fi
             sleep 10
           done
           [[ "$status" == '200' ]]
           grep --quiet 'RIVER ROOM' page.html
+          grep --quiet 'id="lang"' page.html
+          grep --quiet 'i18n.js' page.html
           curl --fail --silent --show-error --location "${url}styles.css" --output styles.css
+          curl --fail --silent --show-error --location "${url}overrides.css" --output overrides.css
           curl --fail --silent --show-error --location "${url}game.js" --output game.js
+          curl --fail --silent --show-error --location "${url}i18n.js" --output i18n.js
           [[ -s styles.css ]]
+          [[ -s overrides.css ]]
+          grep --quiet 'overflow-y:auto' overrides.css
           node --check game.js
+          node --check i18n.js
