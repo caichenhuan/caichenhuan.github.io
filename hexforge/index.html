@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0a1026" />
+  <meta name="description" content="星铲战纪：一款原创轻量自走棋网页小游戏。购买英雄、激活羁绊、布置阵容并自动战斗。" />
+  <title>星铲战纪 · 原创自走棋小游戏</title>
+  <style>html,body{margin:0;min-height:100%;background:#070a18;color:#fff}</style>
+
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"></div>
+  <div id="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">⚒</div>
+        <div class="brand-copy">
+          <h1>星铲战纪</h1>
+          <p>原创轻量自走棋 · 十波远征</p>
+        </div>
+      </div>
+
+      <div class="stats-strip" aria-label="玩家状态">
+        <div class="stat-chip"><span>波次</span><strong id="roundStat">1/10</strong></div>
+        <div class="stat-chip hp"><span>生命</span><strong id="hpStat">100</strong></div>
+        <div class="stat-chip gold"><span>金币</span><strong id="goldStat">10</strong></div>
+        <div class="stat-chip level"><span>等级</span><strong id="levelStat">3</strong></div>
+        <div class="stat-chip"><span>上阵</span><strong id="capStat">1/3</strong></div>
+      </div>
+
+      <div class="top-actions">
+        <button class="icon-btn" id="soundBtn" type="button" aria-label="切换声音" title="切换声音">🔊</button>
+        <button class="icon-btn" id="helpBtn" type="button" aria-label="玩法说明" title="玩法说明">?</button>
+        <button class="icon-btn" id="resetBtn" type="button" aria-label="重新开始" title="重新开始">↻</button>
+      </div>
+    </header>
+
+    <main class="game-layout">
+      <aside class="panel left-panel">
+        <section>
+          <div class="section-heading">
+            <h2>阵容羁绊</h2>
+            <span>同名只计一次</span>
+          </div>
+          <div id="traitList" class="trait-list"></div>
+        </section>
+
+        <div class="panel-divider"></div>
+
+        <section>
+          <div class="section-heading">
+            <h2>已选英雄</h2>
+            <span id="selectionHint">点击棋子查看</span>
+          </div>
+          <div id="selectedCard" class="selected-card">选择备战席或棋盘上的英雄<br />即可移动、交换或出售</div>
+        </section>
+      </aside>
+
+      <section class="center-stage">
+        <div class="panel phase-bar">
+          <div class="phase-copy">
+            <div class="phase-title"><i id="phaseDot" class="phase-dot"></i><span id="phaseTitle">备战阶段</span></div>
+            <div id="phaseSubtitle" class="phase-subtitle">购买英雄并调整站位，准备好后开始战斗。</div>
+          </div>
+          <div class="phase-actions">
+            <button id="autoArrangeBtn" class="secondary-btn" type="button">智能布阵</button>
+            <button id="mainAction" class="primary-btn" type="button">开始战斗</button>
+          </div>
+        </div>
+
+        <div class="panel board-shell">
+          <div id="board" aria-label="六行七列战棋棋盘">
+            <span class="zone-label enemy">ENEMY · 敌方战区</span>
+            <span class="zone-label player">PLAYER · 我方战区</span>
+            <div id="hexLayer"></div>
+            <div id="unitLayer"></div>
+            <div id="effectLayer"></div>
+            <div id="battleBanner" class="battle-banner" aria-live="polite">
+              <h2 id="bannerTitle">胜利</h2>
+              <p id="bannerText"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel bench-panel">
+          <div class="bench-header">
+            <div class="bench-title">备战席 <span>点击棋子后，再点击目标格完成移动</span></div>
+            <div class="bench-actions">
+              <button id="recallBtn" class="ghost-btn" type="button">撤回所选</button>
+              <button id="sellBtn" class="ghost-btn danger" type="button">出售所选</button>
+            </div>
+          </div>
+          <div id="bench" aria-label="备战席"></div>
+        </div>
+      </section>
+
+      <aside class="panel right-panel">
+        <section>
+          <div class="section-heading">
+            <h2>下一位对手</h2>
+            <span id="bossBadge"></span>
+          </div>
+          <div class="opponent-card">
+            <div id="opponentTitle" class="opponent-title">雾港巡逻队</div>
+            <div id="opponentSub" class="opponent-sub">第 1 波 · 基础战力</div>
+            <div id="enemyPreview" class="enemy-preview"></div>
+            <div class="power-row"><span>预计威胁</span><strong id="enemyPower">低</strong></div>
+            <div class="progress-track" aria-label="远征进度"><i id="campaignProgress"></i></div>
+          </div>
+        </section>
+
+        <div class="panel-divider"></div>
+
+        <section>
+          <div class="section-heading">
+            <h2>战局记录</h2>
+            <span id="streakText">连胜 0</span>
+          </div>
+          <div id="logList" class="log-list"></div>
+        </section>
+
+        <div class="panel-divider"></div>
+
+        <div id="tipBox" class="tip-box">小提示：三个同名同星英雄会自动合成高一星；二星英雄拥有更高生命与攻击。</div>
+      </aside>
+    </main>
+
+    <section class="panel shop-panel">
+      <div class="shop-toolbar">
+        <div class="shop-title">
+          <h2>英雄商店</h2>
+          <p id="shopOdds">当前刷新概率：1费 65% · 2费 30% · 3费 5%</p>
+        </div>
+        <div class="shop-controls">
+          <button id="lockBtn" class="ghost-btn" type="button">🔓 锁定</button>
+          <button id="xpBtn" class="secondary-btn" type="button">购买经验 · 4</button>
+          <button id="rerollBtn" class="secondary-btn" type="button">刷新商店 · 2</button>
+        </div>
+      </div>
+      <div id="shop" aria-label="英雄商店"></div>
+    </section>
+
+    <div class="footer-note">本作使用原创角色、数值与界面，仅借鉴自走棋类型的通用玩法，不隶属于或代表任何商业游戏。</div>
+  </div>
+
+  <div id="toastStack" class="toast-stack" aria-live="polite"></div>
+
+  <div id="modalBackdrop" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div id="modal" class="modal"></div>
+  </div>
+
+
+  <script src="./c1.js"></script>
+  <script src="./c2.js"></script>
+  <script src="./j1.js"></script>
+  <script src="./j2.js"></script>
+  <script src="./j3.js"></script>
+  <script>
+  (()=>{
+    const decode=async value=>{const bytes=Uint8Array.from(atob(value),c=>c.charCodeAt(0));const stream=new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'));return new Response(stream).text();};
+    const fail=err=>{console.error(err);document.body.innerHTML='<main style="min-height:100vh;display:grid;place-items:center;background:#070a18;color:#fff;font:16px system-ui;padding:24px;text-align:center"><div><h1>游戏加载失败</h1><p>请刷新页面，或使用最新版 Chrome、Edge、Safari、Firefox。</p></div></main>';};
+    if(!('DecompressionStream' in window)) return fail(new Error('DecompressionStream unsupported'));
+    Promise.all([decode((window.__HF_CSS||[]).join('')),decode((window.__HF_JS||[]).join(''))]).then(([css,js])=>{const style=document.createElement('style');style.textContent=css;document.head.appendChild(style);const script=document.createElement('script');script.textContent=js;document.body.appendChild(script);delete window.__HF_CSS;delete window.__HF_JS;}).catch(fail);
+  })();
+  </script>
+</body>
+</html>
