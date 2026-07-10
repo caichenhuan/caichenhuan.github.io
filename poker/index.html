@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#07130f">
+<title>River Room · 德州扑克</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body><div class="app">
+<header class="top"><div class="brand"><div class="logo">♠</div><div><h1>RIVER ROOM</h1><p>德州扑克 · 单机锦标赛</p></div></div><div class="stats"><div class="stat"><span>手数</span><b id="hands">—</b></div><div class="stat"><span>盲注</span><b id="blinds">10 / 20</b></div><div class="stat gold"><span>你的筹码</span><b id="hero">2,000</b></div></div><div class="menu"><button id="rules">规则</button><button id="restart">重开</button></div></header>
+<main class="layout"><section class="left"><div class="stage"><div class="table"><div class="felt"><div class="seats" id="seats"></div><div class="center"><div class="street" id="street">准备开局</div><div class="board" id="board"></div><div class="pot">底池 <b id="pot">0</b></div><div class="status" id="status">正在洗牌…</div></div></div></div></div>
+<section class="controls"><div class="overview"><div><small style="color:var(--gold)">你的牌</small><br><b id="hand">等待发牌</b></div><p id="hint">游戏开始后可在这里操作。</p></div><div class="betbox" id="betbox"><div class="bethead"><span>下注至</span><output id="amount">40</output></div><input id="slider" type="range" min="40" max="2000" value="40"><div class="quick"><button data-q=".5">½ 底池</button><button data-q=".67">⅔ 底池</button><button data-q="1">满池</button><button data-q="all">全下</button></div></div><div class="acts"><button class="foldBtn" id="fold">弃牌</button><button class="callBtn" id="call">过牌</button><button class="raiseBtn" id="raise">加注至 40</button><button class="next hide" id="next">下一手牌</button></div></section></section>
+<aside class="log"><small>TABLE LOG</small><h2>行动记录</h2><div class="loglist" id="log"></div><div class="note">仅使用虚拟筹码，不涉及真实货币。请理性娱乐。</div></aside></main></div>
+<dialog class="modal" id="rulebox"><button class="close" onclick="this.closest('dialog').close()">关闭</button><h2>德州扑克规则</h2><p>每人 2 张底牌，与 5 张公共牌组合，选择最强的 5 张牌。下注依次经历翻牌前、翻牌、转牌和河牌；仍未弃牌的玩家最终摊牌。</p><div class="rankgrid"><div>1 皇家同花顺</div><div>2 同花顺</div><div>3 四条</div><div>4 葫芦</div><div>5 同花</div><div>6 顺子</div><div>7 三条</div><div>8 两对</div><div>9 一对</div><div>10 高牌</div></div></dialog><div class="toast" id="toast"></div>
+<script src="game.js"></script></body></html>
