@@ -1,0 +1,34 @@
+name: Poker live smoke test
+
+on:
+  pull_request:
+    paths:
+      - 'poker/**'
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - name: Verify deployed poker game
+        shell: bash
+        run: |
+          set -euo pipefail
+          url='https://caichenhuan.github.io/poker/'
+          status=''
+          for attempt in {1..24}; do
+            status="$(curl --location --silent --show-error --output page.html --write-out '%{http_code}' "$url" || true)"
+            if [[ "$status" == '200' ]] && grep --quiet 'RIVER ROOM' page.html; then
+              break
+            fi
+            sleep 10
+          done
+          [[ "$status" == '200' ]]
+          grep --quiet 'RIVER ROOM' page.html
+          curl --fail --silent --show-error --location "${url}styles.css" --output styles.css
+          curl --fail --silent --show-error --location "${url}game.js" --output game.js
+          [[ -s styles.css ]]
+          node --check game.js
