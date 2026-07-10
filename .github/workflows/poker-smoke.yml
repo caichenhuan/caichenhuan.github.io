@@ -24,7 +24,8 @@ jobs:
             if [[ "$status" == '200' ]] \
               && grep --quiet 'RIVER ROOM' page.html \
               && grep --quiet 'id="lang"' page.html \
-              && grep --quiet 'i18n.js' page.html; then
+              && grep --quiet 'id="sound"' page.html \
+              && grep --quiet 'effects.js' page.html; then
               break
             fi
             sleep 10
@@ -32,13 +33,21 @@ jobs:
           [[ "$status" == '200' ]]
           grep --quiet 'RIVER ROOM' page.html
           grep --quiet 'id="lang"' page.html
+          grep --quiet 'id="sound"' page.html
           grep --quiet 'i18n.js' page.html
+          grep --quiet 'effects.js' page.html
           curl --fail --silent --show-error --location "${url}styles.css" --output styles.css
           curl --fail --silent --show-error --location "${url}overrides.css" --output overrides.css
+          curl --fail --silent --show-error --location "${url}effects.css" --output effects.css
           curl --fail --silent --show-error --location "${url}game.js" --output game.js
           curl --fail --silent --show-error --location "${url}i18n.js" --output i18n.js
+          curl --fail --silent --show-error --location "${url}effects.js" --output effects.js
           [[ -s styles.css ]]
           [[ -s overrides.css ]]
+          [[ -s effects.css ]]
           grep --quiet 'overflow-y:auto' overrides.css
+          grep --quiet 'river-board-reveal' effects.css
+          grep --quiet 'AudioContext' effects.js
           node --check game.js
           node --check i18n.js
+          node --check effects.js
