@@ -1,0 +1,66 @@
+#sound{
+  min-width:46px;
+  display:grid;
+  place-items:center;
+  color:var(--gold);
+  font-size:16px;
+  line-height:1;
+}
+#sound[data-sound="off"]{color:var(--muted);opacity:.78}
+#sound[data-sound="unsupported"]{cursor:not-allowed;opacity:.38}
+
+.card.fx-board-reveal{
+  transform-origin:50% 100%;
+  backface-visibility:hidden;
+  will-change:transform,opacity,filter;
+  animation:river-board-reveal .42s cubic-bezier(.2,.78,.2,1) both;
+  animation-delay:var(--fx-delay,0ms);
+}
+@keyframes river-board-reveal{
+  0%{opacity:0;transform:translateY(-48px) scale(.72) rotateY(88deg) rotateZ(-7deg);filter:brightness(1.7) blur(2px)}
+  58%{opacity:1;transform:translateY(4px) scale(1.04) rotateY(-7deg) rotateZ(1deg);filter:brightness(1.16) blur(0)}
+  78%{transform:translateY(-2px) scale(.99) rotateY(3deg)}
+  100%{opacity:1;transform:translateY(0) scale(1) rotateY(0) rotateZ(0);filter:brightness(1)}
+}
+
+.card.fx-hole-deal{
+  z-index:7;
+  transform-origin:center;
+  backface-visibility:hidden;
+  will-change:transform,opacity;
+  animation:river-hole-deal .24s cubic-bezier(.18,.72,.2,1) both;
+  animation-delay:var(--fx-delay,0ms);
+}
+@keyframes river-hole-deal{
+  0%{opacity:0;transform:translate(var(--fx-x,0),var(--fx-y,0)) scale(.28) rotateY(82deg) rotateZ(var(--fx-rotate,6deg))}
+  68%{opacity:1;transform:translate(0,0) scale(1.07) rotateY(-5deg) rotateZ(-1deg)}
+  100%{opacity:1;transform:translate(0,0) scale(1) rotateY(0) rotateZ(0)}
+}
+
+.pot.fx-pot-pop{animation:river-pot-pop .3s cubic-bezier(.2,.8,.2,1)}
+@keyframes river-pot-pop{
+  0%{transform:scale(.93);box-shadow:0 0 0 0 #e2c27b00}
+  50%{transform:scale(1.08);box-shadow:0 0 0 7px #e2c27b18}
+  100%{transform:scale(1);box-shadow:0 0 0 0 #e2c27b00}
+}
+
+.felt.fx-showdown:before{
+  content:"";
+  position:absolute;
+  inset:4%;
+  z-index:2;
+  pointer-events:none;
+  border-radius:50%;
+  background:radial-gradient(ellipse at center,#f1d58a2c 0,transparent 58%);
+  animation:river-showdown-glow .85s ease-out both;
+}
+@keyframes river-showdown-glow{
+  0%{opacity:0;transform:scale(.72)}
+  38%{opacity:1;transform:scale(1.03)}
+  100%{opacity:0;transform:scale(1.18)}
+}
+
+@media(max-width:520px){#sound{min-width:39px;padding-inline:6px}}
+@media(prefers-reduced-motion:reduce){
+  .card.fx-board-reveal,.card.fx-hole-deal,.pot.fx-pot-pop,.felt.fx-showdown:before{animation-duration:.01ms!important;animation-delay:0ms!important}
+}
