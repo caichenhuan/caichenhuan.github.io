@@ -27,7 +27,7 @@ redirect_from:
 <section class="project-card" markdown="1">
 <a id="shapenav"></a>
 <div class="project-title">ShapeNav: 3D Geometric Perception and Reasoning for Multi-Floor Vision-and-Language Navigation</div>
-<div class="project-meta">Under review at CVPR 2026 · <a href="/files/shapenav.pdf">PDF</a></div>
+<div class="project-meta">ACM MM 2026 · <a href="/files/shapenav.pdf">PDF</a></div>
 
 <img class="project-image" src="/images/structure_shapenav.png" alt="ShapeNav framework">
 

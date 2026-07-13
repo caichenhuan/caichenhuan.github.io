@@ -47,7 +47,7 @@ Hi, I’m **Chenhuan (Choy) Cai**. I’m currently pursuing an M.S. in Artificia
 # Updates
 
 
-- (Nov 2025) Our paper on Vision-and-Language Navigation is under review at CVPR 2026.
+- (Jul 2026) - Our paper on Vision-and-Language Navigation is accepted by ACM MM 2026. <img src="/images/acm-mm-2026.png" width="120" style="display:inline;vertical-align:middle;">
 - (Jul 2025) - Our paper on Dense Video Captioning is accepted by ECAI 2025. <img src="/images/ecai2025.png" width="50" style="display:inline;vertical-align:middle;">
 - (Mar 2025) - I started a project on 3D Gaussian Reconstruction in ETH Zurich. <img src="/images/ethz.png" width="70" style="display:inline;vertical-align:middle;">
 

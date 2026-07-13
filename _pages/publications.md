@@ -20,7 +20,7 @@ redirect_from:
 <a id="shapenav-paper"></a>
 <article class="publication-item" markdown="1">
 <div class="publication-title">ShapeNav: 3D Geometric Perception and Reasoning for Multi-Floor Vision-and-Language Navigation</div>
-<div class="publication-meta">Wu Y.*, <strong>Cai C.</strong>*, Yan L., Li M., Xu C., Yang C., Guan F., Li P. · Under review at CVPR 2026</div>
+<div class="publication-meta">Wu Y.*, <strong>Cai C.</strong>*, Yan L., Li M., Xu C., Yang C., Guan F., Li P. · ACM MM 2026</div>
 <a class="publication-link" href="/files/shapenav.pdf">PDF</a>
 </article>
 </div>
